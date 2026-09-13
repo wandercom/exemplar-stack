@@ -21,24 +21,24 @@ supporting, adjacent, research, and non-tool repos, read
 
 | Component | Language | Charter | Primary consumers | ADR |
 | --- | --- | --- | --- | --- |
-| Constrain | Python | Interview and synthesize stack artifacts from problem intent. | Pact, Ledger, Arbiter, Baton | `~/Code/constrain/README.md` |
-| Pact | Python | Contract-first decomposition, tests, and agent implementation pipeline. | Reeve, Sentinel, Arbiter | `~/Code/pact/README.md` |
+| Constrain | Python | Interview and synthesize stack artifacts from problem intent. | Pact, Ledger, Arbiter, Baton | `~/WanderRepos/repos/constrain/README.md` |
+| Pact | Python | Contract-first decomposition, tests, and agent implementation pipeline. | Reeve, Sentinel, Arbiter | `~/WanderRepos/repos/pact/README.md` |
 | Reeve | TypeScript | Operator-facing business automation and first integration host. | Operators, Baton, Tessera | `~/Code/reeve/docs/stack-roadmap.md` |
-| Baton | Python | Circuit orchestration, adapter control, taint scanning, canary routing. | Reeve, stack-smoke | `~/Code/baton/CLAUDE.md` |
-| Ledger | Python | Field classification and obligation registry. | Baton, Reeve, Sentinel | `~/Code/ledger/CLAUDE.md` |
-| Arbiter | Python | Access auditing, consistency analysis, blast-radius classification, and trust enforcement. | Baton, Ledger, Sentinel | `~/Code/arbiter/README.md` |
-| Sentinel | Python | PACT-key attribution and enforcement severity. | Baton, Reeve | `~/Code/sentinel/design.md` |
-| Tessera | Rust | Self-validating executable document and hash-chain evidence format. | Reeve, scram, witness | `~/Code/tessera/README.md` |
-| Chronicler | Python | Event collection and story assembly from spans, logs, webhooks, and incidents. | Reeve, Sentinel, Vigil | `~/Code/chronicler/README.md` |
+| Baton | Python | Circuit orchestration, adapter control, taint scanning, canary routing. | Reeve, stack-smoke | `~/WanderRepos/repos/baton/CLAUDE.md` |
+| Ledger | Python | Field classification and obligation registry. | Baton, Reeve, Sentinel | `~/WanderRepos/repos/ledger/CLAUDE.md` |
+| Arbiter | Python | Access auditing, consistency analysis, blast-radius classification, and trust enforcement. | Baton, Ledger, Sentinel | `~/WanderRepos/repos/arbiter/README.md` |
+| Sentinel | Python | PACT-key attribution and enforcement severity. | Baton, Reeve | `~/WanderRepos/repos/sentinel/design.md` |
+| Tessera | Rust | Self-validating executable document and hash-chain evidence format. | Reeve, scram, witness | `~/WanderRepos/repos/tessera/README.md` |
+| Chronicler | Python | Event collection and story assembly from spans, logs, webhooks, and incidents. | Reeve, Sentinel, Vigil | `~/WanderRepos/repos/chronicler/README.md` |
 | Stigmergy | Python | Organizational pattern discovery over work artifacts and correlated stories. | Chronicler, Apprentice, operators | `~/Code/stigmergy/README.md` |
-| Apprentice | Python | Distill repeated frontier-model tasks into cheaper local models with quality gates. | Reeve, Chronicler, Stigmergy | `~/Code/apprentice/README.md` |
+| Apprentice | Python | Distill repeated frontier-model tasks into cheaper local models with quality gates. | Reeve, Chronicler, Stigmergy | `~/WanderRepos/repos/apprentice/README.md` |
 | Signet | Rust | Sovereign credential vault, proof, and agent authority policy. | Reeve, witness, operator identity | `~/Code/signet/README.md` |
-| Cartographer | Python | Stack adoption, discovery, and compatibility checks for existing codebases. | Infrastructure team, CI | `~/Code/cartographer/README.md` |
-| aegis | TypeScript + Python | Hot-path resource budgets and egress wrappers with golden vectors plus differential fuzzing. | Reeve, Baton | `~/Code/aegis/ADR-001-extraction.md` |
-| covenant | TypeScript + Python | Zod-canonical contracts exported to committed JSON Schema for Python consumers. | Reeve, Baton, Ledger, Sentinel | `~/Code/covenant/ADR-001-extraction.md` |
-| vigil | Python | Off-path anomaly detection using rolling quantile baselines over stack event streams. | Baton, Reeve dashboard | `~/Code/vigil/ADR-001-extraction.md` |
-| scram | Python | Emergency kill switch and read-only/quarantine actions. | Reeve, Baton, witness | `~/Code/scram/ADR-001-extraction.md` |
-| witness | TypeScript | Human-in-the-loop decisions and two-person approval. | Reeve, scram | `~/Code/witness/ADR-001-extraction.md` |
+| Cartographer | Python | Stack adoption, discovery, and compatibility checks for existing codebases. | Infrastructure team, CI | `~/WanderRepos/repos/cartographer/README.md` |
+| aegis | TypeScript + Python | Hot-path resource budgets and egress wrappers with golden vectors plus differential fuzzing. | Reeve, Baton | `~/WanderRepos/repos/aegis/ADR-001-extraction.md` |
+| covenant | TypeScript + Python | Zod-canonical contracts exported to committed JSON Schema for Python consumers. | Reeve, Baton, Ledger, Sentinel | `~/WanderRepos/repos/covenant/ADR-001-extraction.md` |
+| vigil | Python | Off-path anomaly detection using rolling quantile baselines over stack event streams. | Baton, Reeve dashboard | `~/WanderRepos/repos/vigil/ADR-001-extraction.md` |
+| scram | Python | Emergency kill switch and read-only/quarantine actions. | Reeve, Baton, witness | `~/WanderRepos/repos/scram/ADR-001-extraction.md` |
+| witness | TypeScript | Human-in-the-loop decisions and two-person approval. | Reeve, scram | `~/WanderRepos/repos/witness/ADR-001-extraction.md` |
 
 ## Dependency Shape
 

@@ -13,7 +13,7 @@ the gold-standard operating environment.
 For an infrastructure-team handoff that explains the operational invariants,
 composition paths, failure semantics, and capability introduced by the tool
 suite, read [docs/infrastructure-handoff.md](docs/infrastructure-handoff.md).
-For the local `~/Code` inventory that separates core Exemplar tools from
+For the workspace inventory that separates core Exemplar tools from
 supporting, adjacent, research, and non-tool repos, read
 [docs/code-inventory.md](docs/code-inventory.md).
 
@@ -21,24 +21,24 @@ supporting, adjacent, research, and non-tool repos, read
 
 | Component | Language | Charter | Primary consumers | ADR |
 | --- | --- | --- | --- | --- |
-| Constrain | Python | Interview and synthesize stack artifacts from problem intent. | Pact, Ledger, Arbiter, Baton | `~/WanderRepos/repos/constrain/README.md` |
-| Pact | Python | Contract-first decomposition, tests, and agent implementation pipeline. | Reeve, Sentinel, Arbiter | `~/WanderRepos/repos/pact/README.md` |
-| Reeve | TypeScript | Operator-facing business automation and first integration host. | Operators, Baton, Tessera | `~/Code/reeve/docs/stack-roadmap.md` |
-| Baton | Python | Circuit orchestration, adapter control, taint scanning, canary routing. | Reeve, stack-smoke | `~/WanderRepos/repos/baton/CLAUDE.md` |
-| Ledger | Python | Field classification and obligation registry. | Baton, Reeve, Sentinel | `~/WanderRepos/repos/ledger/CLAUDE.md` |
-| Arbiter | Python | Access auditing, consistency analysis, blast-radius classification, and trust enforcement. | Baton, Ledger, Sentinel | `~/WanderRepos/repos/arbiter/README.md` |
-| Sentinel | Python | PACT-key attribution and enforcement severity. | Baton, Reeve | `~/WanderRepos/repos/sentinel/design.md` |
-| Tessera | Rust | Self-validating executable document and hash-chain evidence format. | Reeve, scram, witness | `~/WanderRepos/repos/tessera/README.md` |
-| Chronicler | Python | Event collection and story assembly from spans, logs, webhooks, and incidents. | Reeve, Sentinel, Vigil | `~/WanderRepos/repos/chronicler/README.md` |
-| Stigmergy | Python | Organizational pattern discovery over work artifacts and correlated stories. | Chronicler, Apprentice, operators | `~/Code/stigmergy/README.md` |
-| Apprentice | Python | Distill repeated frontier-model tasks into cheaper local models with quality gates. | Reeve, Chronicler, Stigmergy | `~/WanderRepos/repos/apprentice/README.md` |
-| Signet | Rust | Sovereign credential vault, proof, and agent authority policy. | Reeve, witness, operator identity | `~/Code/signet/README.md` |
-| Cartographer | Python | Stack adoption, discovery, and compatibility checks for existing codebases. | Infrastructure team, CI | `~/WanderRepos/repos/cartographer/README.md` |
-| aegis | TypeScript + Python | Hot-path resource budgets and egress wrappers with golden vectors plus differential fuzzing. | Reeve, Baton | `~/WanderRepos/repos/aegis/ADR-001-extraction.md` |
-| covenant | TypeScript + Python | Zod-canonical contracts exported to committed JSON Schema for Python consumers. | Reeve, Baton, Ledger, Sentinel | `~/WanderRepos/repos/covenant/ADR-001-extraction.md` |
-| vigil | Python | Off-path anomaly detection using rolling quantile baselines over stack event streams. | Baton, Reeve dashboard | `~/WanderRepos/repos/vigil/ADR-001-extraction.md` |
-| scram | Python | Emergency kill switch and read-only/quarantine actions. | Reeve, Baton, witness | `~/WanderRepos/repos/scram/ADR-001-extraction.md` |
-| witness | TypeScript | Human-in-the-loop decisions and two-person approval. | Reeve, scram | `~/WanderRepos/repos/witness/ADR-001-extraction.md` |
+| Constrain | Python | Interview and synthesize stack artifacts from problem intent. | Pact, Ledger, Arbiter, Baton | `constrain/README.md` |
+| Pact | Python | Contract-first decomposition, tests, and agent implementation pipeline. | Reeve, Sentinel, Arbiter | `pact/README.md` |
+| Reeve | TypeScript | Operator-facing business automation and first integration host. | Operators, Baton, Tessera | `reeve/docs/stack-roadmap.md` |
+| Baton | Python | Circuit orchestration, adapter control, taint scanning, canary routing. | Reeve, stack-smoke | `baton/CLAUDE.md` |
+| Ledger | Python | Field classification and obligation registry. | Baton, Reeve, Sentinel | `ledger/CLAUDE.md` |
+| Arbiter | Python | Access auditing, consistency analysis, blast-radius classification, and trust enforcement. | Baton, Ledger, Sentinel | `arbiter/README.md` |
+| Sentinel | Python | PACT-key attribution and enforcement severity. | Baton, Reeve | `sentinel/design.md` |
+| Tessera | Rust | Self-validating executable document and hash-chain evidence format. | Reeve, scram, witness | `tessera/README.md` |
+| Chronicler | Python | Event collection and story assembly from spans, logs, webhooks, and incidents. | Reeve, Sentinel, Vigil | `chronicler/README.md` |
+| Stigmergy | Python | Organizational pattern discovery over work artifacts and correlated stories. | Chronicler, Apprentice, operators | `stigmergy/README.md` |
+| Apprentice | Python | Distill repeated frontier-model tasks into cheaper local models with quality gates. | Reeve, Chronicler, Stigmergy | `apprentice/README.md` |
+| Signet | Rust | Sovereign credential vault, proof, and agent authority policy. | Reeve, witness, operator identity | `signet/README.md` |
+| Cartographer | Python | Stack adoption, discovery, and compatibility checks for existing codebases. | Infrastructure team, CI | `cartographer/README.md` |
+| aegis | TypeScript + Python | Hot-path resource budgets and egress wrappers with golden vectors plus differential fuzzing. | Reeve, Baton | `aegis/ADR-001-extraction.md` |
+| covenant | TypeScript + Python | Zod-canonical contracts exported to committed JSON Schema for Python consumers. | Reeve, Baton, Ledger, Sentinel | `covenant/ADR-001-extraction.md` |
+| vigil | Python | Off-path anomaly detection using rolling quantile baselines over stack event streams. | Baton, Reeve dashboard | `vigil/ADR-001-extraction.md` |
+| scram | Python | Emergency kill switch and read-only/quarantine actions. | Reeve, Baton, witness | `scram/ADR-001-extraction.md` |
+| witness | TypeScript | Human-in-the-loop decisions and two-person approval. | Reeve, scram | `witness/ADR-001-extraction.md` |
 
 ## Dependency Shape
 
@@ -76,7 +76,7 @@ Baton/Sentinel artifacts before a component is fully onboarded.
   consumers such as Vigil, Stigmergy, and Apprentice.
 - Use Cartographer during adoption and CI compatibility checks to discover
   missing stack artifacts before runtime.
-- Keep stack-wide and continuous smoke assertions in `~/Code/stack-smoke`.
+- Keep stack-wide and continuous smoke assertions in the `stack-smoke` repo.
 - Keep Reeve-specific migrations to extracted libraries in Wave 3, after
   component ADRs and skeletons land.
 

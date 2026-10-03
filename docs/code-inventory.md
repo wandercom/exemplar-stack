@@ -1,6 +1,6 @@
 # Code Inventory and Reeve Leverage Map
 
-Generated from the local `~/Code` workspace on 2026-05-06. This inventory is
+Generated from a local workspace of sibling checkouts on 2026-05-06. This inventory is
 meant to prevent the Reeve + Exemplar plan from missing load-bearing tools or
 mistaking demos/research repos for production infrastructure.
 

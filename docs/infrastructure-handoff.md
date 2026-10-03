@@ -7,7 +7,7 @@ and what capability the stack introduces for AI-assisted operations.
 It is written for infrastructure engineers who need to operate, extend, or
 review the stack. It is not a product overview.
 
-For the companion inventory of local `~/Code` repos and how each one relates to
+For the companion inventory of workspace repos and how each one relates to
 Exemplar/Reeve, see [code-inventory.md](code-inventory.md).
 
 ## Executive Summary
